@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Resume Display</title>
+    <link rel="stylesheet" href="static/bootstrap.css">
+</head>
+<body>
+    <h1 class="m-5 p-5">HEB Company</h1>
+
+    <img src="../static/img/HEB.jpeg" class="m-5 p-5 logo">
+
+    <h2 class="m-5 p-5">Software Developer</h2>
+
+    <form class="m-5 p-5" action="" method="post">
+        <label for="fname">First Name </label>
+        <input type="text" id="fname" name="fname" value={{ user['firstName'] }}><br>
+        <label for="lname">Last Name </label>
+        <input type="text" id="lname" name="lname" value={{ user['lastName'] }}><br>
+        <label for="address">Address </label>
+        <input type="text" id="address" name="address" value={{ user['address'] }}><br>
+        <label for="city">City </label>
+        <input type="text" id="city" name="city" value={{ user['city'] }}><br>
+        <label for="state">State </label>
+        <input type="text" id="state" name="state" value={{ user['state'] }}><br>
+        <label for="zipcode">Zipcode </label>
+        <input type="text" id="zipcode" name="zipcode" value={{ user['zipcode'] }}><br>
+        <label for="pnumber">Phone Number </label>
+        <input type="text" id="pnumber" name="pnumber" value={{ user['phoneNumber'] }}><br>
+        <label for="email">Email </label>
+        <input type="email" id="email" name="email" value={{ user['email'] }}><br>
+        <input type="submit" value="Submit Application">
+    </form>
+    <p class="m5 p-5 text-primary" style="font-size: 4em">
+        {% if submit %}
+        Submission Successful!
+        {% endif %}
+    </p>
+</body>
+</html>
